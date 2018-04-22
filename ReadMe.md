@@ -4,7 +4,7 @@
 These are slides for a talk that I gave at the Department of
 Statistics at Colorado State University on 23 Apr 2018.
 
-PDF of slides at <https://bit.ly/CSU2018>.
+PDF of slides at <https://bit.ly/csu2018>.
 
 ---
 
