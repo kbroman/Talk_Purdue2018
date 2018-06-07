@@ -2,6 +2,8 @@
 
 library(broman)
 source("colors.R")
+color2 <- broman::brocolors("crayons")[c("Cornflower", "Tickle Me Pink", "Sea Green")]
+
 
 lines <- read.csv("../Data/lines_code_by_version.csv")
 lines <- lines[nrow(lines):1,]
@@ -29,7 +31,7 @@ grayplot(lines[,2], lines[,3], xlab="", ylab="", yat=yat, xat=NA,
          xlim=range(xaxis), xaxs="i", mgp.y=c(3.3, 0.4, 0))
 title(xlab="Year", col.lab="lightblue", cex.lab=1.7, mgp=c(2,0,0))
 title(ylab="Lines of code", col.lab="lightblue", cex.lab=1.5, mgp=c(3.6,0,0))
-for(i in 4:5)
+for(i in 5:4)
   points(lines[,2], lines[,i], pch=21, col="black", bg=color2[i-2])
 
 u <- par("usr")
@@ -56,7 +58,7 @@ text(svn, txt, "svn", adj=c(0.5, 0), col=col)
 text(git, txt, "git", adj=c(0.5, 0), col=col)
 
 x <- max(lines[,2])
-text(rep(x, 3) + c(200, 200, 100), lines[nrow(lines),3:5] + c(0, 0,-1800),
+text(rep(x, 3) + c(170, 170, 100), lines[nrow(lines),3:5] + c(0, 0,-1800),
      c("R", "C", "doc"), col=col, adj=c(0.5, 0.5), cex=1)
 
 dev.off()
@@ -71,7 +73,7 @@ par(mar=c(3.6, 5.1, 2.3, 0.1),las=1,fg="white",col="white",col.axis="white",col.
 
 yat <- seq(0, 40000, by=5000)
 
-yr <- 2000:2018
+yr <- 2000:2019
 idea <- as.numeric(dmy("23 Feb 2000"))
 R100 <- as.numeric(dmy("29 Feb 2000"))
 svn <- as.numeric(dmy("16 Jan 2008"))
@@ -87,7 +89,7 @@ grayplot(lines[,2], lines[,3], xlab="", ylab="", yat=yat, xat=NA,
          xlim=range(xaxis), xaxs="i", mgp.y=c(3.3, 0.4, 0))
 title(xlab="Year", col.lab="lightblue", cex.lab=1.7, mgp=c(2,0,0))
 title(ylab="Lines of code", col.lab="lightblue", cex.lab=1.5, mgp=c(3.6,0,0))
-for(i in 4:5)
+for(i in 5:4)
   points(lines[,2], lines[,i], pch=21, col="black", bg=color2[i-2])
 
 u <- par("usr")
@@ -116,7 +118,7 @@ text(git, txt, "git", adj=c(0.5, 0), col=col)
 text(CTC1+60, top*0.75+bot*0.25, "CTC1", adj=c(0, 0.5), col=col)
 
 x <- max(lines[,2])
-text(rep(x, 3), lines[nrow(lines),3:5] + c(-1800,+1800,+1800),
+text(rep(x, 3) + c(170, 170, 100), lines[nrow(lines),3:5] + c(0, 0,-1800),
      c("R", "C", "doc"), col=col, adj=c(0.5, 0.5), cex=1)
 
 dev.off()
