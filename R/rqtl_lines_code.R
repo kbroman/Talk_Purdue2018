@@ -14,7 +14,7 @@ par(mar=c(3.6, 5.1, 2.3, 0.1),las=1,fg="white",col="white",col.axis="white",col.
 
 yat <- seq(0, 40000, by=5000)
 
-yr <- 2000:2018
+yr <- 2000:2019
 idea <- as.numeric(dmy("23 Feb 2000"))
 R100 <- as.numeric(dmy("29 Feb 2000"))
 svn <- as.numeric(dmy("16 Jan 2008"))
@@ -56,7 +56,7 @@ text(svn, txt, "svn", adj=c(0.5, 0), col=col)
 text(git, txt, "git", adj=c(0.5, 0), col=col)
 
 x <- max(lines[,2])
-text(rep(x, 3), lines[nrow(lines),3:5] + c(-1800,+1800,+1800),
+text(rep(x, 3) + c(200, 200, 100), lines[nrow(lines),3:5] + c(0, 0,-1800),
      c("R", "C", "doc"), col=col, adj=c(0.5, 0.5), cex=1)
 
 dev.off()
