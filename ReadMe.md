@@ -1,7 +1,7 @@
 ### Talk on &ldquo;R/qtl2: QTL analysis in multi-parent populations&rdquo;
 
 
-These are slides for a talk that I will give at the
+These are slides for a talk that I gave at the
 [Purdue Symposium on Statistics](http://www.stat.purdue.edu/symp2018)
 on 7 June 2018.
 
